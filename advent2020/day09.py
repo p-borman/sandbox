@@ -5,9 +5,10 @@ Solution to Advent of Code 2020: Day 09
 """
 
 from itertools import combinations
-from AdventUtils import read_nums as read
+from AdventUtils import FileReaderUtils
 
-real = read('input09')
+file_reader = FileReaderUtils()
+real = file_reader.read_nums('input09')
 
 def special(lst):
     searching = True

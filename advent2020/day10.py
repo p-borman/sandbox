@@ -3,11 +3,14 @@
 """
 Solution to Advent of Code 2020: Day 10
 """
-from AdventUtils import read_nums_sorted as read
-            
-real = read('input10')
-t1 = read('input10t1')
-t2 = read('input10t2')
+from AdventUtils import FileReaderUtils
+
+
+file_reader = FileReaderUtils()
+real = file_reader.read_nums_sorted('input10')
+t1 = file_reader.read_nums_sorted('input10t1')
+t2 = file_reader.read_nums_sorted('input10t2')
+
 
 def diff(lst):
     diff = []

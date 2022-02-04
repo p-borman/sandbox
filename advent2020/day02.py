@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from AdventUtils import read
+from AdventUtils import FileReaderUtils
 """
 Solution to Advent of Code 2020: Day 02
 """
@@ -14,7 +14,10 @@ validpws1 = []
 # check the letter appears in a0 xor a1 spot in pw
 validpws2 = []
 
-for line in read('input02'):
+file_reader = FileReaderUtils()
+
+fileLines = file_reader.read('input02')
+for line in fileLines:
     rule, pw = line.split(': ')
     letter = rule.split(' ')[1]
     a0, a1 = map(int, rule.split(' ')[0].split('-'))

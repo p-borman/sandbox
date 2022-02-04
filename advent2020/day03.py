@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from AdventUtils import read
+from AdventUtils import FileReaderUtils
 """
 Solution to Advent of Code 2020: Day 03
 """
 
 def hit(x,y, debug=False):
-    mnt = read('input03')
+    file_reader = FileReaderUtils()
+    mnt = file_reader.read('input03')
     period = len(mnt[0])
     y_max = len(mnt)
     
