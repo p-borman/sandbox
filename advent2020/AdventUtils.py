@@ -17,6 +17,19 @@ class FileReaderUtils:
         with open(filename) as file:
             return self.__parse_file_lines(file)
 
+    @staticmethod
+    def __parse_file_lines(file: IO):
+        """
+        Private method:
+        Given a file returns all the lines of the file as a list
+
+        :param file: The opened file to read
+        :return: All The lines of the file as a list
+        """
+        return [line.strip() for line in file.readlines()]
+
+
+class NumberFileReader(FileReaderUtils):
     def read_nums(self, filename: str) -> List[int]:
         """
         Reads the specified FILE and returns a LIST of INTs
@@ -36,17 +49,6 @@ class FileReaderUtils:
         """
         lst = self.read_nums(filename)
         return sorted(lst + [0, max(lst) + 3])
-
-    @staticmethod
-    def __parse_file_lines(file: IO):
-        """
-        Private method:
-        Given a file returns all the lines of the file as a list
-
-        :param file: The opened file to read
-        :return: All The lines of the file as a list
-        """
-        return [line.strip() for line in file.readlines()]
 
     @staticmethod
     def __parse_num(val: str) -> int:

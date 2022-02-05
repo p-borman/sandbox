@@ -3,10 +3,10 @@
 """
 Solution to Advent of Code 2020: Day 10
 """
-from AdventUtils import FileReaderUtils
+from AdventUtils import NumberFileReader
 
 
-file_reader = FileReaderUtils()
+file_reader = NumberFileReader()
 real = file_reader.read_nums_sorted('input10')
 t1 = file_reader.read_nums_sorted('input10t1')
 t2 = file_reader.read_nums_sorted('input10t2')
